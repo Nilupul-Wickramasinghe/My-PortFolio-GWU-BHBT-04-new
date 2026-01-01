@@ -22,7 +22,7 @@ export function Projects() {
     tags: ['UI Design', 'Healthcare', 'Mobile'],
     color: 'from-pink-500 to-rose-500'
   }, {
-    title: 'EMG Sensor Circuit',
+    title: 'EMG Sensor Circuit new ',
     category: 'Biomedical Engineering',
     description: 'Design and implementation of an Electromyography (EMG) sensor circuit for muscle signal detection and analysis.',
     image: emgProject,
