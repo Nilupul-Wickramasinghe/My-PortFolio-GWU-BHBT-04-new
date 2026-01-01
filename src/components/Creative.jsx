@@ -7,6 +7,7 @@ import fashion from '../Fashion.png';
 import bridel from '../bridel.jpg';
 import hairDressing from '../Hair dressing.jpg';
 import makeupImg from '../makeup.jpg';
+import outdoorShoot from '../Outdoor shoot.png';
 
 export function Creative() {
   const [activeTab, setActiveTab] = useState('modeling');
@@ -20,7 +21,7 @@ export function Creative() {
       title: 'Outdoor Shoot',
       desc: 'A natural outdoor shoot capturing confidence, style, and authentic expressions in an open environment.',
       color: 'bg-indigo-100',
-      image: 'src/Outdoor shoot.png'
+      image: outdoorShoot
     }, {
       title: 'Formal Wear Shoot',
       desc: 'A modern full suit shoot focusing on clean cuts, strong posture, and professional style.',
