@@ -1,0 +1,104 @@
+/* URL IMPORTS (SUCH AS FONT IMPORTS) SHOULD BE KEPT ABOVE TAILWIND IMPORTS - DO NOT DELETE THIS COMMENT */
+
+/* PLEASE NOTE: THESE TAILWIND IMPORTS SHOULD NEVER BE DELETED - DO NOT DELETE THIS COMMENT */
+@import 'tailwindcss/base';
+@import 'tailwindcss/components';
+@import 'tailwindcss/utilities';
+/* DO NOT DELETE THESE TAILWIND IMPORTS, OTHERWISE THE STYLING WILL NOT RENDER AT ALL - DO NOT DELETE THIS COMMENT */
+
+@layer base {
+	/* Improve default text contrast in dark mode */
+	.dark body,
+	.dark .min-h-screen {
+		color: #e5e7eb; /* text-gray-200 */
+	}
+
+	.dark p,
+	.dark span,
+	.dark li,
+	.dark a,
+	.dark h1,
+	.dark h2,
+	.dark h3,
+	.dark h4 {
+		color: #e5e7eb;
+	}
+
+	/* Ensure small meta text remains readable */
+	.dark .text-gray-400 {
+		color: #9ca3af;
+	}
+	/* Common utility overrides to ensure readability in dark mode */
+	.dark .text-gray-700 {
+		color: #d1d5db; /* text-gray-300 */
+	}
+	.dark .text-gray-600 {
+		color: #9ca3af; /* text-gray-400 */
+	}
+	.dark .text-gray-800,
+	.dark .text-gray-900,
+	.dark .text-black {
+		color: #f3f4f6; /* text-gray-100 */
+	}
+	/* Smooth transform utility for images and interactive elements */
+	.smooth-transform {
+		transition: transform 280ms cubic-bezier(.22,1,.36,1), box-shadow 280ms ease;
+	}
+	.smooth-transform:hover {
+		transform: translateY(-6px) scale(1.02);
+	}
+
+	/* Subtle fade utility for inline elements */
+	.fade-in {
+		opacity: 0;
+		transform: translateY(6px);
+		animation: fadeInUp 600ms cubic-bezier(.22,1,.36,1) forwards;
+	}
+
+	@keyframes fadeInUp {
+		to {
+			opacity: 1;
+			transform: translateY(0);
+		}
+	}
+}
+
+/* Background animation blobs */
+.bg-anim {
+	z-index: 0;
+}
+.bg-blob {
+	position: absolute;
+	border-radius: 9999px;
+	filter: blur(60px);
+	opacity: 0.7;
+	transform: translate3d(0,0,0);
+	will-change: transform;
+}
+.blob-large {
+	width: 720px;
+	height: 520px;
+	left: -120px;
+	top: -60px;
+	background: radial-gradient(circle at 30% 30%, rgba(99,102,241,0.9), rgba(59,130,246,0.6));
+}
+.blob-mid {
+	width: 480px;
+	height: 360px;
+	right: -80px;
+	top: 120px;
+	background: radial-gradient(circle at 70% 30%, rgba(236,72,153,0.85), rgba(249,115,22,0.45));
+}
+.blob-small {
+	width: 240px;
+	height: 200px;
+	left: 40%;
+	top: 600px;
+	background: radial-gradient(circle at 50% 50%, rgba(34,197,94,0.85), rgba(16,185,129,0.35));
+}
+
+/* Ensure page content sits above the fixed background */
+.content-above-bg {
+	position: relative;
+	z-index: 10;
+}
